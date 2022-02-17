@@ -1,0 +1,27 @@
+<header>
+    <nav
+      class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+    >
+      <div class="container">
+        <a class="navbar-brand" [routerLink]="['/']">Log In</a>
+    </div>
+</nav>
+</header>
+<div>
+    <form [formGroup]="form" (ngSubmit)="login()">
+        <div class="row no-gutters">
+            <label>User Id: </label>
+            <input type="text" name="userId"  Placeholder="User Id" formControlName="UserId" autocomplete="off" />
+        </div>
+        <br />
+        <div class="row no-gutters">
+            <label>Password: </label>
+            <input type="password" name="password" Placeholder="Password" formControlName="Password" autocomplete="off" />
+        </div>
+        <br />
+        <br />
+        <div class="row no-gutters" >
+            <button type="submit">Log In</button>
+        </div>
+    </form>
+</div>
